@@ -1,10 +1,14 @@
+/* boards/shields/corne_xiao_v1/corne_xiao_v1_right.overlay */
+
 #include "corne_xiao_v1.dtsi"
 
+/* これが超重要！右手のマトリックス番号を6つずらす設定 */
 &default_transform {
     col-offset = <6>;
 };
 
 &kscan0 {
+    /* 右手の列ピン (左手と同じD0-D5を使う) */
     col-gpios
         = <&xiao_d 0 GPIO_ACTIVE_HIGH>
         , <&xiao_d 1 GPIO_ACTIVE_HIGH>
