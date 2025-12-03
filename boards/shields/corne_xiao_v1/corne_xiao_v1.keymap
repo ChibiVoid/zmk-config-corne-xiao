@@ -20,7 +20,7 @@
             display-name = "Base";
             bindings = <
     /* 上段 (10キー) */
-    &kp TAB   &kp L     &kp U     &kp F     &kp COMMA      &kp LGUI  &kp W     &kp R     &kp Y     &kp F5
+    &kp TAB   &kp L     &kp U     &kp F     &kp COMMA      &kp LA(GRAVE)  &kp W     &kp R     &kp Y     &kp F5
     /* 中段 (12キー) */
     &kp Q     &kp E     &kp I     &kp A     &kp O     &kp MINUS    &kp K     &kp T     &kp N     &kp S     &kp H     &kp P
     /* 下段 (12キー) */
