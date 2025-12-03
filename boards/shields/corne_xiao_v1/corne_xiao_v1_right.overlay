@@ -1,4 +1,5 @@
 /* boards/shields/corne_xiao_v1/corne_xiao_v1_right.overlay */
+
 #include "corne_xiao_v1.dtsi"
 
 &default_transform {
@@ -6,14 +7,13 @@
 };
 
 &kscan0 {
-    /* 右手の物理配線に合わせて順序を変更 */
-    /* D4(内側), D0, D1, D2, D3, D5(外側/未使用) */
+    /* 右手配線修正: D1始まりに変更し、D0を5番目に移動 */
     col-gpios
-        = <&xiao_d 4 GPIO_ACTIVE_HIGH>
-        , <&xiao_d 0 GPIO_ACTIVE_HIGH>
-        , <&xiao_d 1 GPIO_ACTIVE_HIGH>
-        , <&xiao_d 2 GPIO_ACTIVE_HIGH>
-        , <&xiao_d 3 GPIO_ACTIVE_HIGH>
-        , <&xiao_d 5 GPIO_ACTIVE_HIGH>
+        = <&xiao_d 1 GPIO_ACTIVE_HIGH>  /* Col 0 (内側) */
+        , <&xiao_d 2 GPIO_ACTIVE_HIGH>  /* Col 1 */
+        , <&xiao_d 3 GPIO_ACTIVE_HIGH>  /* Col 2 */
+        , <&xiao_d 4 GPIO_ACTIVE_HIGH>  /* Col 3 */
+        , <&xiao_d 0 GPIO_ACTIVE_HIGH>  /* Col 4 */
+        , <&xiao_d 5 GPIO_ACTIVE_HIGH>  /* Col 5 (外側) */
         ;
 };
