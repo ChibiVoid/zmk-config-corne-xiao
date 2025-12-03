@@ -1,5 +1,4 @@
 /* boards/shields/corne_xiao_v1/corne_xiao_v1.keymap */
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
@@ -13,17 +12,12 @@
             bindings = <&studio_unlock>;
         };
     };
-};
 
-/ {
     keymap {
         compatible = "zmk,keymap";
 
-        /* Layer 0: Base */
         default_layer {
             display-name = "Base";
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-
             bindings = <
     /* 上段 (10キー) */
     &kp TAB   &kp L     &kp U     &kp F     &kp COMMA      &kp LGUI  &kp W     &kp R     &kp Y     &kp F5
@@ -31,51 +25,35 @@
     &kp Q     &kp E     &kp I     &kp A     &kp O     &kp MINUS    &kp K     &kp T     &kp N     &kp S     &kp H     &kp P
     /* 下段 (12キー) */
     &kp LGUI  &kp Z     &kp X     &kp C     &kp V     &kp LGUI     &kp G     &kp D     &kp M     &kp J     &kp B     &kp LGUI
-    /* 親指 (6キー) */
+    /* 親指 */
                         &kp LCTRL &kp RET   &lt 1 BSPC     &lt 1 BSPC &lt 2 SPACE &kp RSHIFT
             >;
         };
 
-        /* Layer 1: Lower */
         lower_layer {
             display-name = "Lower";
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-
             bindings = <
-    /* 上段 */
     &kp TAB   &kp N1    &kp N2    &kp N3    &kp DOT        &kp LGUI  &kp LS(COMMA) &kp EQUAL &kp LS(DOT) &kp F5
-    /* 中段 */
     &kp TILDE &kp N0    &kp N4    &kp N5    &kp N6    &kp TAB      &kp CARET &kp PLUS  &kp MINUS &kp ASTRK &kp FSLH  &kp PRCNT
-    /* 下段 */
     &kp LGUI  &kp DOLLAR &kp N7   &kp N8    &kp N9    &kp LGUI     &kp UNDER &kp EXCL  &kp QMARK &kp COLON &kp SEMI  &kp LGUI
-    /* 親指 */
                         &kp LCTRL &kp RET   &lt 1 BSPC     &lt 1 BSPC &lt 2 SPACE &kp RSHIFT
             >;
         };
 
-        /* Layer 2: Raise */
         raise_layer {
             display-name = "Raise";
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-
             bindings = <
-    /* 上段 */
     &kp TAB   &kp LBKT  &kp DQT   &kp RBKT  &kp PIPE       &kp LGUI  &kp LS(COMMA) &kp EQUAL &kp LS(DOT) &kp F5
-    /* 中段 */
     &kp AT    &kp HASH  &kp LPAR  &kp SQT   &kp RPAR  &kp AMPS     &kp C_VOL_UP &kp LEFT &kp DOWN  &kp RIGHT &kp LANG5 &kp PSCRN
-    /* 下段 */
     &kp LGUI  &kp BSLH  &kp LBRC  &kp GRAVE &kp RBRC  &kp LGUI     &kp C_VOL_DN &kp C_PREV &kp C_PP  &kp C_NEXT &kp DEL   &kp LGUI
-    /* 親指 */
                         &kp LCTRL &kp RET   &lt 1 BSPC     &lt 1 BSPC &lt 2 SPACE &kp RSHIFT
             >;
         };
-
+        
         extra1 { status = "reserved"; };
         extra2 { status = "reserved"; };
     };
 };
 
 /* I2C無効化 */
-&i2c0 {
-    status = "disabled";
-};
+&i2c0 { status = "disabled"; };
