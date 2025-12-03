@@ -39,6 +39,7 @@
     /* 親指: 6キー (左3 + 右3) */
                           &kp LGUI   &kp SPACE  &kp RET         &kp RET    &kp SPACE  &kp RSHFT
             >;
+        };
 
         lower_layer {
             display-name = "lower";
