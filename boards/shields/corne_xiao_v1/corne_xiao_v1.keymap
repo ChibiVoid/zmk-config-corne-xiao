@@ -27,18 +27,15 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |  MUTE  |  |        |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |                    | ENT | RSE  | ALT |
             bindings = <
-/* 1行目: 10個 (N5を削除して数を合わせる) */
-&kp N0 &kp N1 &kp N2 &kp N3 &kp N4       &kp L  &kp M  &kp N  &kp O  &kp P
-
-/* 2行目: 12個 (Pが上に戻ったので N6 からスタート) */
-&kp N6 &kp N7 &kp N8 &kp N9 &kp A &kp B  &kp Q  &kp R  &kp S  &kp T  &kp U &kp V
-
-/* 3行目: 12個 (隠れキーを消したので H, W が戻ってくるはず) */
-&kp C  &kp D  &kp E  &kp F  &kp G &kp H  &kp W  &kp X  &kp Y  &kp Z  &kp EXCL &kp AT
-
-/* 親指: 6個 */
-              &kp I  &kp J  &kp K        &kp HASH &kp DOLLAR &kp PERCENT
->;
+    /* 1行目 (12キー) */
+    &kp TAB   &kp Q &kp W &kp E &kp R &kp T       &kp Y &kp U &kp I     &kp O   &kp P    &kp BSPC
+    /* 2行目 (12キー) */
+    &kp LCTRL &kp A &kp S &kp D &kp F &kp G       &kp H &kp J &kp K     &kp L   &kp SEMI &kp SQT
+    /* 3行目 (12キー) */
+    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B       &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp ESC
+    /* 親指 (6キー) */
+                    &kp LGUI &kp SPACE &kp RET    &kp RET &kp SPACE &kp RALT
+            >;
         };
 
         lower_layer {
