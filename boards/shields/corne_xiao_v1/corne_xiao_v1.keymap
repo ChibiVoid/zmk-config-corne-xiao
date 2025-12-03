@@ -19,13 +19,13 @@
     keymap {
         compatible = "zmk,keymap";
 
-        /* Layer 0: Base (Onishi-like Custom) - 動作確認済み */
+        /* Layer 0: Base */
         default_layer {
             display-name = "base";
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 
             bindings = <
-    /* 1行目 (10キー) */
+    /* 1行目 (10キー) : 内側を削除して詰めました */
     &kp TAB   &kp L     &kp U     &kp F     &kp COMMA      &kp W     &kp R     &kp Y     &kp F5    &none
     /* 2行目 (12キー) */
     &kp Q     &kp E     &kp I     &kp A     &kp O     &kp MINUS    &kp K     &kp T     &kp N     &kp S     &kp H     &kp P
@@ -36,34 +36,34 @@
             >;
         };
 
-        /* Layer 1: Lower (Numbers & Symbols) */
+        /* Layer 1: Lower */
         lower_layer {
             display-name = "lower";
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 
             bindings = <
-    /* 1行目 (10キー) */
+    /* 1行目 (10キー) : 数字は N1, N2... 表記へ修正 */
     &kp TAB   &kp N1    &kp N2    &kp N3    &kp DOT        &kp LS(COMMA) &kp EQUAL &kp LS(DOT) &kp F5    &none
-    /* 2行目 (12キー) */
+    /* 2行目 (12キー) : 記号を正しいコード名へ修正 */
     &kp TILDE &kp N0    &kp N4    &kp N5    &kp N6    &kp TAB      &kp CARET &kp PLUS  &kp MINUS &kp ASTRK &kp FSLH  &kp PRCNT
-    /* 3行目 (12キー) */
+    /* 3行目 (12キー) : $→DOLLAR, ;→SEMI, :→COLON */
     &kp LGUI  &kp LGUI  &kp DOLLAR &kp N7   &kp N8    &kp N9       &kp UNDER &kp EXCL  &kp QMARK &kp COLON &kp SEMI  &kp LGUI
     /* 親指 */
                         &kp RET   &lt 1 BSPC &kp LCTRL     &kp LSHIFT &lt 1 BSPC &lt 2 SPACE
             >;
         };
 
-        /* Layer 2: Raise (Nav & Symbols) */
+        /* Layer 2: Raise */
         raise_layer {
             display-name = "raise";
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 
             bindings = <
-    /* 1行目 (10キー) */
+    /* 1行目 (10キー) : 記号を正しいコード名へ修正 */
     &kp TAB   &kp LBKT  &kp DQT   &kp RBKT  &kp PIPE       &kp ESC   &kp UP    &kp CAPS  &kp F5    &none
-    /* 2行目 (12キー) - ※左手2番目(Eの場所)はHASHを残しています */
+    /* 2行目 (12キー) : 左手2番目のHASHだけ残し、他は修正 */
     &kp AT    &kp HASH  &kp LPAR  &kp SQT   &kp RPAR  &kp AMPS     &kp C_VOL_UP &kp LEFT &kp DOWN  &kp RIGHT &kp LANG5 &kp PSCRN
-    /* 3行目 (12キー) */
+    /* 3行目 (12キー) : \→BSLH, ~→TILDEなど */
     &kp LGUI  &kp LGUI  &kp BSLH  &kp LBRC  &kp GRAVE &kp RBRC     &kp C_VOL_DN &kp C_PREV &kp C_PP  &kp C_NEXT &kp DEL   &kp LGUI
     /* 親指 */
                         &kp RET   &lt 1 BSPC &kp LCTRL     &kp LSHIFT &lt 1 BSPC &lt 2 SPACE
