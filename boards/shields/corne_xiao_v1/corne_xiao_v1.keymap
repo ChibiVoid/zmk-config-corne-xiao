@@ -41,6 +41,7 @@
     keymap {
         compatible = "zmk,keymap";
 
+//0
         default_layer {
             display-name = "Base";
             bindings = <
@@ -51,10 +52,11 @@
     /* 下段 (12キー) */
     &kp LALT  &kp Z     &kp X     &kp C     &kp V     &kp LGUI     &kp G     &kp D     &kp M     &kp J     &kp B     &none
     /* 親指 */
-                        &lt 1 BSPC &lt 3 RET  &kp LCTRL       &kp RSHIFT  &lt 2 SPACE &lt 1 BSPC
+                        &lt 1 BSPC &lt 3 RET  &kp LCTRL       &kp LSHIFT  &lt 2 SPACE &lt 1 BSPC
             >;
         };
 
+//1
         lower_layer {
             display-name = "Lower";
             bindings = <
@@ -62,30 +64,55 @@
     &kp JP_TILDE &kp N0    &kp N4  &kp N5  &kp N6  &kp TAB         &kp JP_CARET   &kp JP_PLUS    &kp MINUS   &kp JP_ASTERISK   &kp FSLH    &kp PRCNT
     &kp LALT
     &kp DOLLAR  &kp N7  &kp N8  &kp N9  &kp LGUI    &kp JP_UNDERSCORE &kp EXCL  &kp QMARK &kp JP_COLON &kp SEMI    &none
-                        &lt 1 BSPC &lt 3 RET  &kp LCTRL       &kp RSHIFT  &lt 2 SPACE &lt 1 BSPC
+                        &lt 1 BSPC &lt 3 RET  &kp LCTRL       &kp LSHIFT  &lt 2 SPACE &lt 1 BSPC
             >;
         };
 
+//2
         raise_layer {
             display-name = "Raise";
             bindings = <
     &kp TAB   &kp JP_LBRACKET   &kp DOUBLE_QUOTES   &kp JP_RBRACKET  &kp PIPE       &kp F7  &kp ESC &kp UP &kp CAPSLOCK &kp F11
     &kp JP_AT &kp HASH  &kp JP_LPAREN  &kp JP_QUOTE   &kp JP_RPAREN  &kp JP_AMPERSAND     &kp C_VOL_UP &kp LEFT &kp DOWN  &kp RIGHT &kp JP_HANZEN &kp PSCRN
     &kp LALT  &kp JP_YEN  &kp JP_LBRACE &kp JP_BACKQUOTE &kp JP_RBRACE  &kp LGUI     &kp C_VOL_DN &kp C_PREV &kp C_PP  &kp C_NEXT &kp DEL   &kp F8
-                        &lt 1 BSPC &lt 3 RET  &kp LCTRL       &kp RSHIFT  &lt 2 SPACE &lt 1 BSPC
+                        &lt 1 BSPC &lt 3 RET  &kp LCTRL       &kp LSHIFT  &lt 2 SPACE &lt 1 BSPC
             >;
         };
 
+
+//3
         setting_layer {
             display-name = "Setting";
             bindings = <
     &bt BT_CLR   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3       &none  &none &none &none &none
-    &none &none  &none  &none   &none  &none     &none &none &none  &none &none &none
+    &tog 4 &none  &none  &none   &none  &none     &none &none &none  &none &none &none
     &none  &none  &none &none &none  &none     &none &none &none  &none &none   &none
-                        &lt 1 BSPC &lt 3 RET  &kp LCTRL       &kp RSHIFT  &lt 2 SPACE &lt 1 BSPC
+                        &lt 1 BSPC &lt 3 RET  &kp LCTRL       &kp LSHIFT  &lt 2 SPACE &lt 1 BSPC
+            >;
+        };
+
+//4
+        gaming_layer {
+            display-name = "Gaming";
+            bindings = <
+    &kp Q   &kp W   &kp E   &kp R  &kp T       &none  &none &none &none &none
+    &kp TAB &kp A  &kp S  &kp D   &kp F  &kp G     &none &none &none  &none &none &none
+    &kp LSHIFT  &kp Z  &kp X &kp C &kp V  &kp B     &none &none &none  &none &none   &none
+                        &kp SPACE &kp LCTRL  &lt 5       &none  &none &none
             >;
         };
         
+//5
+        gaming_layer2 {
+            display-name = "Gaming2";
+            bindings = <
+    &kp ESC   &kp 1   &kp 2   &kp 3  &kp LALT       &none  &none &none &none &none
+    &kp I &kp 0  &kp 4  &kp 5   &kp 6  &kp RET     &none &none &none  &none &none &none
+    &kp F11  &kp K  &kp 7 &kp 8 &kp 9  &lt 0     &none &none &none  &none &none   &none
+                        &kp U &kp J  &lt 5       &none  &none &none
+            >;
+        };
+
         extra1 { status = "reserved"; };
         extra2 { status = "reserved"; };
     };
