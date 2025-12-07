@@ -85,7 +85,7 @@
             display-name = "Setting";
             bindings = <
     &bt BT_CLR   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3       &none  &none &none &none &none
-    &tog 4 &none  &none  &none   &none  &none     &none &none &none  &none &none &none
+    &to 4 &none  &none  &none   &none  &none     &none &none &none  &none &none &none
     &none  &none  &none &none &none  &none     &none &none &none  &none &none   &none
                         &lt 1 BSPC &lt 3 RET  &kp LCTRL       &kp LSHIFT  &lt 2 SPACE &lt 1 BSPC
             >;
@@ -108,7 +108,7 @@
             bindings = <
     &kp ESC   &kp N1   &kp N2   &kp N3  &kp LALT       &none  &none &none &none &none
     &kp I &kp N0  &kp N4  &kp N5   &kp N6  &kp RET     &none &none &none  &none &none &none
-    &kp F11  &kp K  &kp N7 &kp N8 &kp N9  &tog 0     &none &none &none  &none &none   &none
+    &kp F11  &kp K  &kp N7 &kp N8 &kp N9  &to 0     &none &none &none  &none &none   &none
                         &kp U &kp J  &lt 5       &none  &none &none
             >;
         };
