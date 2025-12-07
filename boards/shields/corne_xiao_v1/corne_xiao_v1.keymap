@@ -1,3 +1,28 @@
+// OS設定を日本語キーボードのまま使用するための変換定義
+#define JP_DQUOTE       AT                // "
+#define JP_AMPERSAND    CARET             // &
+#define JP_QUOTE        AMPERSAND         // '
+#define JP_EQUAL        UNDER             // =
+#define JP_CARET        EQUAL             // ^
+#define JP_YEN          0x89              // ¥
+#define JP_PLUS         COLON             // +
+#define JP_TILDE        PLUS              // ~
+#define JP_PIPE         LS(0x89)          // |
+#define JP_AT           LEFT_BRACKET      // @
+#define JP_COLON        SINGLE_QUOTE      // :
+#define JP_ASTERISK     DOUBLE_QUOTES     // *
+#define JP_BACKQUOTE    LEFT_BRACE        // `
+#define JP_UNDERSCORE   LS(0x87)          // _
+#define JP_LBRACKET     RIGHT_BRACKET     // [
+#define JP_RBRACKET     BACKSLASH         // ]
+#define JP_LPAREN       ASTERISK          // (
+#define JP_RPAREN       LEFT_PARENTHESIS  // )
+#define JP_LBRACE       RIGHT_BRACE       // {
+#define JP_RBRACE       PIPE              // }
+#define JP_KANA         LANGUAGE_1        // かな
+#define JP_EISU         LANGUAGE_2        // 英数
+#define JP_HANZEN       GRAVE             // 半角/全角
+
 /* boards/shields/corne_xiao_v1/corne_xiao_v1.keymap */
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -20,13 +45,13 @@
             display-name = "Base";
             bindings = <
     /* 上段 (10キー) */
-    &kp TAB   &kp L     &kp U     &kp F     &kp COMMA      &kp LA(GRAVE)  &kp W     &kp R     &kp Y     &kp F5
+    &kp TAB   &kp L     &kp U     &kp F     &kp COMMA      &kp DOT  &kp W     &kp R     &kp Y     &kp F5
     /* 中段 (12キー) */
     &kp Q     &kp E     &kp I     &kp A     &kp O     &kp MINUS    &kp K     &kp T     &kp N     &kp S     &kp H     &kp P
     /* 下段 (12キー) */
     &kp LGUI  &kp Z     &kp X     &kp C     &kp V     &none     &kp G     &kp D     &kp M     &kp J     &kp B     &none
     /* 親指 */
-                        &kp LCTRL &kp RET   &lt 1 BSPC     &lt 1 BSPC &lt 2 SPACE &kp RSHIFT
+                        &lt 1 BSPC &kp RET  &kp LCTRL       &kp RSHIFT  &lt 2 SPACE &lt 1 BSPC
             >;
         };
 
@@ -34,20 +59,20 @@
             display-name = "Lower";
             bindings = <
     &kp TAB &kp N1  &kp N2  &kp N3  &kp DOT         &none    &kp LESS_THAN   &kp EQUAL   &kp GREATER_THAN    &kp F5
-    &kp TILDE &kp N0    &kp N4  &kp N5  &kp N6  &kp TAB         &kp CARET   &kp PLUS    &kp MINUS   &kp ASTRK   &kp FSLH    &kp PRCNT
+    &kp JP_TILDE &kp N0    &kp N4  &kp N5  &kp N6  &kp TAB         &kp JP_CARET   &kp JP_PLUS    &kp MINUS   &kp JP_ASTERISK   &kp FSLH    &kp PRCNT
     &none
-    &kp DOLLAR  &kp N7  &kp N8  &kp N9  &none    &kp UNDER &kp EXCL  &kp QMARK &kp COLON &kp SEMI    &none
-                        &kp LCTRL   &kp RET   &lt 1 BSPC        &lt 1 BSPC  &lt 2 SPACE &kp RSHIFT
+    &kp DOLLAR  &kp N7  &kp N8  &kp N9  &none    &kp JP_UNDERSCORE &kp EXCL  &kp QMARK &kp JP_COLON &kp SEMI    &none
+                        &lt 1 BSPC &kp RET  &kp LCTRL       &kp RSHIFT  &lt 2 SPACE &lt 1 BSPC
             >;
         };
 
         raise_layer {
             display-name = "Raise";
             bindings = <
-    &kp TAB   &kp LEFT_BRACKET  &kp DOUBLE_QUOTES   &kp RIGHT_BRACKET  &kp PIPE       &none  &kp ESC &kp UP &kp CAPSLOCK &kp F5
-    &kp AT_SIGN &kp HASH  &kp LEFT_PARENTHESIS  &kp SINGLE_QUOTE   &kp RIGHT_PARENTHESIS  &kp AMPERSAND     &kp C_VOL_UP &kp LEFT &kp DOWN  &kp RIGHT &kp F7 &kp PSCRN
-    &none  &kp BACKSLASH  &kp LEFT_BRACE  &kp GRAVE &kp RIGHT_BRACE  &none     &kp C_VOL_DN &kp C_PREV &kp C_PP  &kp C_NEXT &kp DEL   &none
-                        &kp LCTRL &kp RET   &lt 1 BSPC     &lt 1 BSPC &lt 2 SPACE &kp RSHIFT
+    &kp TAB   &kp JP_LBRACKET   &kp DOUBLE_QUOTES   &kp JP_RBRACKET  &kp PIPE       &none  &kp ESC &kp UP &kp CAPSLOCK &kp F5
+    &kp JP_AT &kp HASH  &kp JP_LPAREN  &kp JP_QUOTE   &kp JP_RPAREN  &kp JP_AMPERSAND     &kp C_VOL_UP &kp LEFT &kp DOWN  &kp RIGHT &kp F7 &kp PSCRN
+    &none  &kp JP_YEN  &kp JP_LBRACE &kp JP_BACKQUOTE &kp JP_RBRACE  &none     &kp C_VOL_DN &kp C_PREV &kp C_PP  &kp C_NEXT &kp DEL   &none
+                        &lt 1 BSPC &kp RET  &kp LCTRL       &kp RSHIFT  &lt 2 SPACE &lt 1 BSPC
             >;
         };
         
