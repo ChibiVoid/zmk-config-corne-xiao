@@ -13,14 +13,14 @@
 #
 ---
 include:
-# Revision 1
+# Revision 1 (ここを修正)
   - board: xiao_ble
-    shield: roBa_R rgbled_adapter
+    shield: corne_xiao_v1_left rgbled_adapter
     snippet: studio-rpc-usb-uart
   - board: xiao_ble
-    shield: roBa_L rgbled_adapter
+    shield: corne_xiao_v1_right rgbled_adapter
 
-# Revision 2
+# Revision 2 (ここは合っていますが、念のため確認)
   - board: xiao_ble
     shield: corne_xiao_v2_left rgbled_adapter
     snippet: studio-rpc-usb-uart
