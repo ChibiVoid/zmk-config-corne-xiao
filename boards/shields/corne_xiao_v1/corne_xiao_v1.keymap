@@ -83,7 +83,7 @@
     /* 中段 (12キー) */
     &kp Q     &kp E     &kp I     &kp A     &kp O     &kp MINUS    &kp K     &kp T     &kp N     &kp S     &kp H     &kp P
     /* 下段 (12キー) */
-    &kp LALT  &kp Z     &kp X     &kp C     &kp V     &kp LGUI     &kp G     &kp D     &kp M     &kp J     &kp B     &kp SEMI
+    &kp LALT  &kp Z     &kp X     &kp C     &kp V     &kp LGUI     &kp G     &kp D     &kp M     &kp J     &kp B     &kp RALT
     /* 親指 */
                         &lt_retro 1 BSPC &lt_retro 3 RET  &kp LCTRL       &kp LSHIFT  &lt_retro 2 SPACE &lt_retro 1 BSPC
             >;
