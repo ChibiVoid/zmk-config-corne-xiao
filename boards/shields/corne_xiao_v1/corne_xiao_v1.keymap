@@ -117,9 +117,9 @@
         setting_layer {
             display-name = "Setting";
             bindings = <
-    &bt BT_CLR   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3       &none  &none &none &none &none
+    &bt BT_CLR   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3       &none  &none &none &none &bootloader
     &to 4 &none  &none  &none   &none  &none     &none &none &none  &none &none &none
-    &none  &none  &none &none &none  &none     &none &none &none  &none &none   &none
+    &sys_reset  &none  &none &none &none  &none     &none &none &none  &none &none   &sys_reset
                         &lt_retro 1 BSPC &lt_retro 3 RET  &kp LCTRL       &kp LSHIFT  &lt_retro 2 SPACE &lt_retro 1 BSPC
             >;
         };
